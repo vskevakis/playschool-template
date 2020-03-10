@@ -1,0 +1,29 @@
+.location {
+  background: url(../img/location-bg.png);
+  background-size: cover;
+  background-position: bottom;
+  min-height: 90vh;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+  @include flex(center, center, row);
+
+  div {
+    flex: 1 1 10rem;
+
+    li {
+      @include flex(center, center, row);
+      h3 {
+        flex: 2 1 10rem;
+      }
+      img {
+        flex: 1 1 10rem;
+        height: 10rem;
+      }
+    }
+  }
+  .building {
+    flex: 1 1 10rem;
+    min-height: 37rem;
+  }
+}

@@ -12,24 +12,31 @@
     <meta name="robots" content="index,follow" />
     <link rel="icon" href="./icons/cube.svg" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <title>Playschool Chania | Παιδικός Σταθμός</title>
   </head>
   <body>
-    <div class="nav-container">
-      <header class="main-head">
-        <nav>
-          <div class="logo">
-            <img src="./icons/playshchool_logo.png" alt="playschool-logo" />
-          </div>
-          <ul>
-            <li><a class="page active" href="/">ΑΡΧΙΚΗ</a></li>
-            <li><a class="page idle" href="./our-team/">ΠΡΟΣΩΠΙΚΟ</a></li>
-            <li><a class="page idle" href="./our-classes">ΤΜΗΜΑΤΑ</a></li>
-            <li><a class="page idle" href="./contact">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
-          </ul>
-        </nav>
-      </header>
-    </div>
+    <header class="main-head">
+      <nav>
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div class="logo">
+          <img src="./icons/playshchool_logo.png" alt="playschool-logo" />
+        </div>
+        <ul class="nav-links">
+          <li><a class="page active" href="/">ΑΡΧΙΚΗ</a></li>
+          <li><a class="page idle" href="./our-team/">ΠΡΟΣΩΠΙΚΟ</a></li>
+          <li><a class="page idle" href="./our-classes">ΤΜΗΜΑΤΑ</a></li>
+          <li><a class="page idle" href="./contact">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
+        </ul>
+      </nav>
+    </header>
     <section class="intro">
       <div class="intro-left">
         <img src="./img/main_kid.png" alt="kid-amazed" />
@@ -45,8 +52,7 @@
         <ul>
           <li>
             <svg
-              width="162"
-              height="162"
+              width="40%"
               viewBox="0 0 162 162"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -130,8 +136,7 @@
           </li>
           <li>
             <svg
-              width="180"
-              height="180"
+              width="40%"
               viewBox="0 0 180 180"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -200,8 +205,7 @@
           </li>
           <li>
             <svg
-              width="148"
-              height="148"
+              width="40%"
               viewBox="0 0 148 148"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -305,6 +309,46 @@
         </ul>
       </div>
     </section>
+    <section class="location">
+      <div class="info-container">
+        <ul>
+          <li>
+            <img src="./icons/location (1) 2.svg" alt="location-icon" />
+            <h3>Ηλία Δεληγιαννάκη 110, Χανιά</h3>
+          </li>
+          <li>
+            <img src="./icons/call 1.svg" alt="telephon-icon" />
+            <h3>(+30) 28210 53969/ 54620</h3>
+          </li>
+          <li>
+            <img src="./icons/mail 1.svg" alt="email-icon" />
+            <h3>playschool.chania@gmail.com</h3>
+          </li>
+        </ul>
+      </div>
+      <img
+        src="./img/building.png"
+        alt="playschool-building-image"
+        class="building"
+      />
+    </section>
     <script src="./js/app.js"></script>
   </body>
+  <footer class="main-footer">
+    <h4>Playschool &copy 2020</h4>
+    <h5>
+      designed and <br />
+      powered by
+      <a href="http://skevakis.eu" target="_blank">Vasilis Skevakis</a>
+    </h5>
+    <a
+      href="https://www.facebook.com/profile.php?id=100006057198385"
+      target="_blank"
+      ><img
+        src="./icons/iconmonstr-facebook-4 1.svg"
+        alt="facebook-icon"
+        class="facebook-social"
+      />
+    </a>
+  </footer>
 </html>

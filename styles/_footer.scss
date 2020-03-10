@@ -1,0 +1,15 @@
+.main-footer {
+  min-height: 13vh;
+  z-index: -1;
+  background: url(../img/footer-background.png);
+  background-position: top;
+  padding-top: 5rem;
+
+  h5,
+  a {
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+  }
+
+  @include flex(space-around, center, row);
+}

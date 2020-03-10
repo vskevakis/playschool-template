@@ -17,57 +17,119 @@ $gray-text: #2c2c2c;
 @import "global";
 @import "intro";
 @import "values";
+@import "location";
+@import "footer";
 
-@media screen and (max-width: 1332px) {
+@media screen and (max-width: 1380px) {
   html {
     font-size: 53%;
   }
-  .splash {
+  nav {
+    width: 100%;
+    padding-right: 6rem;
+  }
+  .page::before {
     display: none;
   }
-  svg {
-    width: 80%;
-  }
-  nav {
+
+  .intro {
     width: 100%;
   }
 }
 
-@media screen and (max-width: 754px) {
+@media screen and (max-width: 1148px) {
   html {
     font-size: 45%;
   }
 
-  svg {
-    height: 60%;
-  }
   main-head {
     width: 100%;
   }
-  nav {
-    .logo {
-      margin-top: 2rem;
-      @include flex(center, center, column);
-      flex: 1 1 20rem;
-    }
-    ul {
-      flex: 1 1 60rem;
-      margin: 2rem 0rem;
-    }
-    .intro-text {
-      margin-top: 5rem;
-      text-align: center;
-    }
-    .intro-social {
-      @include flex(center, center, row);
-      a {
-        margin: 2rem;
-      }
-    }
+
+  .intro img {
+    height: 80vh;
+    margin-left: -5rem;
   }
 
   form {
     padding: 0rem;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 888px) {
+  html {
+    font-size: 45%;
+  }
+  .intro-right h1 {
+    font-size: 3rem;
+  }
+  .intro {
+    @include flex(space-between, center, column);
+    flex-wrap: nowrap;
+    .intro-right {
+      background-color: rgba(0, 0, 0, 0.6);
+      flex: 1 1 10rem;
+      padding: 2rem 4rem;
+      margin-bottom: 50rem;
+      z-index: 1;
+    }
+    .intro-left {
+      flex: 3 1 20rem;
+    }
+  }
+
+  .values ul {
+    flex-wrap: wrap;
+    svg {
+      width: 10%;
+    }
+  }
+
+  .location {
+    flex-wrap: wrap;
+    .info-container {
+      margin-top: 8rem;
+    }
+  }
+
+  .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+  }
+  nav {
+    position: relative;
+  }
+
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+
+  .nav-links {
+    position: fixed;
+    background: #f2d2f4;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(100px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .nav-links.open {
+    clip-path: circle(800px at 90% 10%);
+    -webkit-clip-path: circle(800px at 90% 10%);
+    pointer-events: all;
+    z-index: 2;
   }
 }

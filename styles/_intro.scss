@@ -1,55 +1,60 @@
 .main-head {
-  width: 90%;
-  margin: auto;
-}
-.nav-container {
-  height: 16vh;
-  background: url(../img/nav-background.png);
+  background: url(../img/nav-background-2.png);
+  background-size: cover;
   background-position: bottom;
-  z-index: -1;
 }
 nav {
   @include flex(space-between, center, row);
-  min-height: 10vh;
   position: top;
   width: 90%;
+  margin: auto;
   flex-wrap: wrap;
   .logo {
-    @include flex(flex-start, center, row);
     flex: 1 1 10rem;
   }
   ul {
-    @include flex(space-between, center, row);
+    position: relative;
+    @include flex(space-around, center, row);
     flex: 1 1 30rem;
   }
   .page {
-    position: relative;
+    position: absolute;
   }
   .page::before {
     content: url(../icons/cloud-ul-bg.svg);
     position: absolute;
-    bottom: -25px;
-    left: -50px;
+    bottom: -2rem;
+    left: -5rem;
+  }
+
+  .active {
+    text-decoration: underline;
+    text-shadow: 2px 2px 2px #aee3fb;
   }
 }
 
 .intro {
+  position: relative;
   background-image: url(../img/main-bg.svg);
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  min-height: 86vh;
+  min-height: 85vh;
   width: 90%;
   margin: auto;
   flex-wrap: wrap;
   @include flex(center, center, row);
+  overflow: hidden;
 }
 
 .intro-left {
   flex: 1 1 40rem;
 
   img {
-    height: 86vh;
+    position: absolute;
+    bottom: 0;
+    height: 90vh;
+    transform: translateY(-bottom);
   }
 }
 
