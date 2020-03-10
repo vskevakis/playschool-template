@@ -1,0 +1,98 @@
+.main-head {
+  width: 90%;
+  margin: auto;
+}
+.nav-container {
+  height: 16vh;
+  background: url(../img/nav-background.png);
+  background-position: bottom;
+  z-index: -1;
+}
+nav {
+  @include flex(space-between, center, row);
+  min-height: 10vh;
+  position: top;
+  width: 90%;
+  flex-wrap: wrap;
+  .logo {
+    @include flex(flex-start, center, row);
+    flex: 1 1 10rem;
+  }
+  ul {
+    @include flex(space-between, center, row);
+    flex: 1 1 30rem;
+  }
+  .page {
+    position: relative;
+  }
+  .page::before {
+    content: url(../icons/cloud-ul-bg.svg);
+    position: absolute;
+    bottom: -25px;
+    left: -50px;
+  }
+}
+
+.intro {
+  background-image: url(../img/main-bg.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 86vh;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+  @include flex(center, center, row);
+}
+
+.intro-left {
+  flex: 1 1 40rem;
+
+  img {
+    height: 86vh;
+  }
+}
+
+.intro-right {
+  flex: 2 1 40rem;
+  @include flex(center, left, column);
+
+  h1 {
+    flex: 1 1 10rem;
+    font-size: 5rem;
+    padding-top: 2rem;
+    background: black;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+  }
+
+  .typing {
+    position: relative;
+    font-size: 5rem;
+    padding: 2rem 1rem;
+  }
+
+  .typing::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 60%;
+    border-right: 2px solid black;
+    animation: blink 0.5s infinite ease;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+p {
+  padding-top: 2rem;
+  color: $gray-text;
+}

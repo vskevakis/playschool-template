@@ -1,0 +1,69 @@
+/* Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@font-face {
+  font-family: "Script";
+  src: url("../fonts/ac-condensedscript_unicode-webfont.woff2") format("woff2"),
+    url("../fonts/ac-condensedscript_unicode-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Plain";
+  src: url("../fonts/ac-totallyplain-webfont.woff2") format("woff2"),
+    url("../fonts/ac-totallyplain-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Plain", sans-serif;
+  background-color: lightblue;
+}
+
+h1 {
+  font-size: $header1;
+}
+
+li,
+button,
+label,
+input,
+p {
+  font-size: $text;
+}
+
+h2 {
+  font-size: $header2;
+}
+
+h3 {
+  font-size: $header3;
+  font-weight: normal;
+}
+
+h4,
+h5 {
+  font-size: $header4;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  font-size: var(--text);
+  text-decoration: none;
+  font-family: "Script", sans-serif;
+  color: $gray-text;
+}
